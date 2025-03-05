@@ -3,11 +3,7 @@ import { CodeEditorState } from "@/types/types";
 import { editor as MonacoEditor } from "monaco-editor";
 import { create } from "zustand";
 
-const getInitialState = (): {
-  language: string;
-  fontSize: number;
-  theme: string;
-} => {
+const getInitialState = () => {
   // for server
   if (typeof window === "undefined") {
     return {
@@ -101,7 +97,6 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
         });
 
         const data = await res.json();
-        console.log("Res from piston :", data);
 
         if (data.message) {
           set({
@@ -165,3 +160,6 @@ export const useCodeEditorStore = create<CodeEditorState>((set, get) => {
     },
   };
 });
+
+export const getExecutionResult = () =>
+  useCodeEditorStore.getState().executionResult;
