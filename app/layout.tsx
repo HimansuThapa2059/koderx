@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
         >
           <ConvexClientProvider>{children}</ConvexClientProvider>
           <Footer />
+          <Toaster position="bottom-right" />
         </body>
       </html>
     </ClerkProvider>
