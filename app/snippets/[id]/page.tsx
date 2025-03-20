@@ -11,6 +11,7 @@ import { Clock, Code, MessageSquare, User } from "lucide-react";
 import { Editor } from "@monaco-editor/react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "@/constants/boilerplate";
 import CopyButton from "./_components/CopyButton";
+import Comments from "./_components/Comments";
 
 const SnippetDetailPage = () => {
   const { id: snippetId } = useParams<{ id: string }>();
@@ -39,8 +40,8 @@ const SnippetDetailPage = () => {
                   <Image
                     src={`/language/${snippet.language}.png`}
                     alt={`${snippet.language} logo`}
-                    width={200}
-                    height={200}
+                    width={100}
+                    height={100}
                     className="w-full h-full object-contain"
                   />
                 </div>
@@ -100,6 +101,8 @@ const SnippetDetailPage = () => {
               }}
             />
           </div>
+
+          <Comments snippetId={snippetId as Id<"snippets">} />
         </div>
       </main>
     </div>
