@@ -23,15 +23,6 @@ export const LANGUAGE_CONFIG: LanguageConfig = {
     defaultCode: `// 👋 Hey there!
 console.log('Welcome back, have a nice day.');`,
   },
-  typescript: {
-    id: "typescript",
-    label: "TypeScript",
-    logoPath: "/typescript.png",
-    pistonRuntime: { language: "typescript", version: "5.0.3" },
-    monacoLanguage: "typescript",
-    defaultCode: `// 👋 Hey there!
-console.log('Welcome back, have a nice day.');`,
-  },
   python: {
     id: "python",
     label: "Python",
@@ -40,6 +31,20 @@ console.log('Welcome back, have a nice day.');`,
     monacoLanguage: "python",
     defaultCode: `# 👋 Hey there!
 print('Welcome back, have a nice day.')`,
+  },
+  cpp: {
+    id: "cpp",
+    label: "C++",
+    logoPath: "/cpp.png",
+    pistonRuntime: { language: "cpp", version: "10.2.0" },
+    monacoLanguage: "cpp",
+    defaultCode: `// 👋 Hey there!
+#include <iostream>
+
+int main() {
+    std::cout << "Welcome back, have a nice day." << std::endl;
+    return 0;
+}`,
   },
   java: {
     id: "java",
@@ -53,6 +58,15 @@ public class Main {
         System.out.println("Welcome back, have a nice day.");
     }
 }`,
+  },
+  typescript: {
+    id: "typescript",
+    label: "TypeScript",
+    logoPath: "/typescript.png",
+    pistonRuntime: { language: "typescript", version: "5.0.3" },
+    monacoLanguage: "typescript",
+    defaultCode: `// 👋 Hey there!
+console.log('Welcome back, have a nice day.');`,
   },
   go: {
     id: "go",
@@ -77,20 +91,6 @@ func main() {
     defaultCode: `// 👋 Hey there!
 fn main() {
     println!("Welcome back, have a nice day.");
-}`,
-  },
-  cpp: {
-    id: "cpp",
-    label: "C++",
-    logoPath: "/cpp.png",
-    pistonRuntime: { language: "cpp", version: "10.2.0" },
-    monacoLanguage: "cpp",
-    defaultCode: `// 👋 Hey there!
-#include <iostream>
-
-int main() {
-    std::cout << "Welcome back, have a nice day." << std::endl;
-    return 0;
 }`,
   },
   csharp: {
