@@ -50,7 +50,7 @@ const EditorPanel = () => {
 
   return (
     <div className="relative">
-      <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] p-6">
+      <div className="relative bg-[#12121a]/90 backdrop-blur rounded-xl border border-white/[0.05] p-4 md:p-6">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#1e1e2e] ring-1 ring-white/5">
@@ -61,7 +61,7 @@ const EditorPanel = () => {
                 height={24}
               />
             </div>
-            <div>
+            <div className="hidden md:block">
               <h2 className="text-sm font-medium text-white">Code Editor</h2>
               <p className="text-xs text-gray-500">Write your code here</p>
             </div>
@@ -104,7 +104,7 @@ const EditorPanel = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg overflow-hidden bg-gradient-to-r
            from-blue-500 to-blue-600 opacity-90 hover:opacity-100 transition-opacity"
             >
-              <ShareIcon className="size-4 text-white" />
+              <ShareIcon className="hidden md:inline-block size-4 text-white" />
               <span className="text-sm font-medium text-white ">Share</span>
             </motion.button>
           </div>

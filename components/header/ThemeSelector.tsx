@@ -46,7 +46,7 @@ const ThemeSelector = () => {
   if (!mounted) return null;
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="hidden md:block relative" ref={dropdownRef}>
       <motion.button
         whileHover={{ scale: 1.01 }}
         whileTap={{ scale: 0.98 }}
@@ -61,7 +61,7 @@ const ThemeSelector = () => {
         </span>
         {/*color indicator */}
         <div
-          className="relative w-4 h-4 rounded-full border brightness-75 border-gray-600 group-hover:border-gray-500 transition-colors"
+          className="hidden lg:inline-block relative w-4 h-4 rounded-full border brightness-75 border-gray-600 group-hover:border-gray-500 transition-colors"
           style={{ background: currentTheme?.color }}
         />
       </motion.button>
@@ -73,8 +73,7 @@ const ThemeSelector = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.96 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 mt-2 w-full min-w-[220px] bg-[#1e1e2e]/95 
-            backdrop-blur-xl rounded-xl border border-[#313244] shadow-2xl py-2 z-50"
+            className="absolute top-full left-0 mt-2 w-full min-w-[220px] bg-[#1e1e2e]/95 backdrop-blur-xl rounded-xl border border-[#313244] shadow-2xl py-2 z-50"
           >
             <div className="px-2 pb-2 mb-2 border-b border-gray-800/50">
               <p className="text-xs font-medium text-gray-400 px-2">
@@ -89,8 +88,7 @@ const ThemeSelector = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: index * 0.1 }}
                 className={`
-                relative group w-full flex items-center gap-3 px-3 py-2.5 hover:bg-[#262637] transition-all duration-200
-                ${theme === t.id ? "bg-blue-500/10 text-blue-400" : "text-gray-300"}
+                relative group w-full flex items-center gap-3 px-3 py-2.5 hover:bg-[#262637] transition-all duration-200 ${theme === t.id ? "bg-blue-500/10 text-blue-400" : "text-gray-300"}
               `}
                 onClick={() => {
                   setTheme(t.id);
@@ -98,17 +96,12 @@ const ThemeSelector = () => {
                 }}
               >
                 {/* bg gradient */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 
-              group-hover:opacity-100 transition-opacity"
-                />
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 {/* icon */}
                 <div
                   className={`
-                flex items-center justify-center size-8 rounded-lg
-                ${theme === t.id ? "bg-blue-500/10 text-blue-400" : "bg-gray-800/50 text-gray-400"}
-                group-hover:scale-110 transition-all duration-200
+                flex items-center justify-center size-8 rounded-lg ${theme === t.id ? "bg-blue-500/10 text-blue-400" : "bg-gray-800/50 text-gray-400"} group-hover:scale-110 transition-all duration-200
               `}
                 >
                   {THEME_ICONS[t.id] || <CircleOff className="w-4 h-4" />}
