@@ -2,7 +2,7 @@
 
 import { SignedOut, UserButton } from "@clerk/nextjs";
 import { User } from "lucide-react";
-import LoginButton from "../LogInButton";
+import LoginButton from "./LogInButton";
 
 function HeaderProfileBtn() {
   return (

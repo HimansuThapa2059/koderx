@@ -4,7 +4,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ConvexHttpClient } from "convex/browser";
 import { Blocks, Code2, Sparkles } from "lucide-react";
 import Link from "next/link";
-import HeaderProfileBtn from "./HeaderProfileBtn";
+import HeaderProfileBtn from "../../../../components/HeaderProfileBtn";
 import LanguageSelector from "./LanguageSelector";
 import RunButton from "./RunButton";
 import ThemeSelector from "./ThemeSelector";
@@ -34,7 +34,7 @@ const Header = async () => {
                 KoderX
               </span>
               <span className="hidden lg:block text-xs text-blue-400/60 font-medium">
-                Interactive Code Editor
+                Code Editor
               </span>
             </div>
           </Link>

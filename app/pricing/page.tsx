@@ -105,7 +105,7 @@ const PricingPage = async () => {
                     <span className="text-xl text-gray-400">one-time</span>
                   </div>
                   <p className="text-gray-400 text-lg">
-                    Unlock the full potential of CodeCraft
+                    Unlock the full potential of koderX
                   </p>
                 </div>
 
