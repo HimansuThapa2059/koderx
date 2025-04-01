@@ -5,6 +5,7 @@ import ConvexClientProvider from "@/components/providers/ConvexClientProvider";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
           <Footer />
           <Toaster position="bottom-right" />
         </body>
+        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_TAG!} />
       </html>
     </ClerkProvider>
   );
